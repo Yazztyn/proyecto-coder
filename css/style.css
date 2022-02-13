@@ -148,6 +148,7 @@ header label{
     margin: 0 35px;
     margin-top: 1px;
 }
+
 /* Fin ajustes del logo principal */
 
 /* Inicio modificacion de logos redes */
@@ -474,7 +475,7 @@ button,input,textarea{
     color: #fff;
     border-bottom: 1px solid hsl(168, 61%, 100%);
 }
-
+/* hgola */
 button{
     background-color: hsl(168, 61%, 50%);
     border: 0;
@@ -482,7 +483,7 @@ button{
 }
 
 button:hover{
-    background-color : hsl(168, 51%, 50%); 
+    background-color : hsl(168, 51%, 50%);
 }
 /* Fin modificacion para el formulario */
 
