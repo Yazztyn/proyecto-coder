@@ -43,7 +43,7 @@ body{
     "catalogo catalogo catalogo"
     "somos somos clientes"
     "publicidad publicidad clientes"
-    "footer footer footer";          
+    "footer footer footer";         
 }
 /* Fin definicion de grilla para el index.html*/
 
@@ -99,6 +99,7 @@ header label{
     position: fixed;
     display: flex;
     top: 0;
+    
 }
 /* Fin navbar fixed*/
 
@@ -184,6 +185,8 @@ header label{
 /* Inicio modificacion de los titulos y menu */
 h1,h2{
     font-size: 30px;
+    animation: slideInDown;/* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s; /* don't forget to set a duration! */
 }
 /* Fin modificacion de los titulos y menu */
 
