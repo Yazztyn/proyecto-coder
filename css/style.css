@@ -1,0 +1,512 @@
+/* Inicio modificacion para elementos globales */
+*{
+    margin:0;
+    padding:0;
+}
+/* Quito las decoraciones de los links */
+a{
+    text-decoration: none;
+}
+
+/* Inicio modificacion del body */
+body{
+    font-family: 'Barlow', sans-serif;
+    font-size:20px;
+    background-color: hsl(168, 51%, 85%);
+    position: relative;
+    padding-bottom: 7rem;
+    min-height: 100vh;
+}
+/* Fin modificacion del body*/
+
+/* Inicio configuracion para los titulos de las pages */
+.titulo-container{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: hsl(168, 61%, 100%);
+}
+/* Fin configuracion para los titulos de las pages */
+
+/* Fin modificacion para elementos globales */
+
+/* Inicio definicion de grilla para el index.html*/
+.contenedor{
+    width: 100%;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas: 
+    "header header header"
+    "inicio inicio inicio"
+    "catalogo catalogo catalogo"
+    "somos somos clientes"
+    "publicidad publicidad clientes"
+    "footer footer footer";          
+}
+/* Fin definicion de grilla para el index.html*/
+
+/* Inicio definicion de filas y columnas */
+.header{
+    grid-area: header;
+}
+
+.inicio{
+    grid-area:inicio;
+}
+
+.catalogo{
+    grid-area:catalogo;
+}
+
+.somos{
+    grid-area: somos;
+   
+}
+
+.clientes{
+    grid-area: clientes;
+}
+.publicidad{
+    grid-area: publicidad;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: hsl(168, 61%, 100%);
+    position: absolute;
+    bottom: 0;    
+}
+/* Fin definicion de filas y columnas */
+
+/* Inicio ocultacion de icono del menu */
+header label{
+    display: none;
+}
+
+#menu-button{
+    display: none;
+}
+/* Fin ocultacion icono del menu */
+
+/* Inicio navbar fixed*/
+.navbar{
+    width: 100%;
+    height: 5.50rem;
+    line-height: 5.50rem;
+    background-color: hsl(168, 61%, 70%);
+    position: fixed;
+    display: flex;
+    top: 0;
+}
+/* Fin navbar fixed*/
+
+/* Inicio modificacion del navbar horizontal */
+.navbar ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* Fin modificacion del navbar horizontal */
+
+/* Inicio modificacion de li del navbar*/
+.menu-list{
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    padding: 0 auto;
+    flex-direction: row;
+}
+/* Fin modificacion de li del navbar*/
+
+/* Inicio pseudoclases para los botones */
+.menu-list:hover{
+    background-color : hsl(168, 51%, 50%); 
+}
+.menu-list:active{
+    background-color:hsl(168, 51%, 20%); 
+}
+/* Fin pseudoclases para los botones */
+
+/* Inicio modificacion y detalles de los botones del navbar*/
+.buttons{
+    color: white;
+    padding: 0 40px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3) ;
+    width: 100%;
+}
+/* Fin modificacion y detalles de los botones del navbar */
+
+/* Inicio ajustes del logo principal */
+.logo{
+    height:5.30rem;
+    width: 5.30rem;
+    margin: 0 35px;
+    margin-top: 1px;
+}
+/* Fin ajustes del logo principal */
+
+/* Inicio modificacion de logos redes */
+.logos-redes{
+    width: 3.12rem;
+    height: 3.12rem;
+}
+/* Fin modificacion de logos redes */
+
+/* Inicio ocultacion del logo principal para media query */
+.logo-media-query-container{
+    display: none;
+}
+/* Fin ocultacion del logo principal para media query */
+
+/* Inicio modificacion de las cajas*/
+.producto{
+    width:100%;
+    height: auto;
+}
+.producto-descripcion-container{
+    padding: 30px;
+}
+.catalogo-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    width: 100%;
+}
+/* Fin modificacion de las cajas*/
+
+
+/* Inicio modificacion de los titulos y menu */
+h1,h2{
+    font-size: 30px;
+}
+/* Fin modificacion de los titulos y menu */
+
+/* Inicio modificacion del flyer */
+.flyer{
+    width:100%;
+    height:auto;
+}
+/* Fin modificacion del flyer */
+
+/* Inicio modificacion del publicidad */
+.flyer-publicidad{
+    width:100%;
+    height:auto;
+    margin-top: 1.87rem;
+}
+/* Fin modificacion del publicidad*/
+
+/* Inicio separacion footer-paragraph */
+.footer{
+    margin-top: 1.87rem;
+    width: 100%;
+}
+/* Fin separacion footer-paragraph */
+
+/* Inicio limitacion del parrafo somos */
+.somos-paragraph,.clientes-image{
+    margin-top: 1.25rem;
+}
+/* Fin limitacion del parrafo somos */
+
+/* Inicio modificacion de tamaño clientes */
+.clientes-image{
+    width:100%;
+    height: auto;
+}
+/* Fin modificacion del tamaño clientes  */
+
+/* Inicio separacion entre el navbar y el inicio */
+.inicio{
+    margin-top:6rem;
+}
+/* Fin separacion entre el navbar y el inicio */
+
+
+/* Inicio media query para index.html */
+
+/* Medidas para desktop */
+@media screen and (max-width:1200px){
+    /* Reacomodo la grilla */
+    .contenedor{
+        grid-template-areas: 
+        "header header header"
+        "inicio inicio inicio"
+        "catalogo catalogo catalogo"
+        "somos somos somos"
+        "publicidad publicidad publicidad"
+        "clientes clientes clientes"
+        "footer footer footer";  
+    }
+}
+/* Medida para tablets */
+@media screen and (max-width:992px){
+    .contenedor{
+        width: 100%;
+    }
+    /* Inicio boton menu estatico */
+    header label{
+        display: block;
+        width:30px;
+        height: 30px;
+    }
+    /* Fin boton menu estatico */
+
+    /* Inicio header */
+    .header{
+        width: 100%;
+        height: 5.5rem;
+        line-height: 5.50rem;
+        background-color: hsl(168, 61%, 70%);
+        position: fixed;
+        top: 0;
+    }
+    /* Fin header */
+
+    /* Inicio navbar vertical */
+    .navbar:not(.logo-container){
+        position: absolute;
+        top: 50px;
+        background-color: hsl(168, 51%, 70%);
+        width: auto;
+        height: auto;
+        margin-left:-70%;
+        transition: all 1s;
+    }
+    
+    ul:not(.logo-container){
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+    /* Fin navbar vertical */
+
+    /* Inicio ocultacion del logo principal */
+    .logo-container{
+        display: none;
+    }
+    /* Fin ocultacion del logo principal */
+
+    /* Inicio modificacion del logo en media query */
+    .logo-media-query-container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 0.625rem;
+        width: 100%;
+        height: 30px;
+    }
+    /* Fin modificacion del logo en media query */
+
+    /* Inicio activacion y modificacion del boton menu */
+    #menu-button:checked ~ .navbar{
+        margin: 0;
+    }
+    .menu-icon{
+        width: 3.12rem;
+        margin-bottom: 1.87rem;
+        position: absolute;
+        top: 0px;
+    }
+    /* Fin activacion y modificacion del boton menu */
+}
+/* Fin media query para index.html */
+
+/* _________________________________________________________________________________________________________________________________*/
+
+/* Catalogo.html */
+
+/* Inicio definicion de grilla para el catalogo.html*/
+ .catalogo-page-container{
+    width: 100%;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "header header header"
+    "productos productos productos"
+    "footer footer footer";  
+ }
+/* Fin definicion de grilla para el catalogo.html*/
+
+/* Inicio definicion de filas y columnas */
+
+.productos{
+    grid-area:productos;
+}
+
+/* Fin definicion de filas y columnas */
+
+/* Inicio agrupacion de boxes */
+
+.boxes-container1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.boxes-container2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.boxes-container3{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.boxes-container4{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Fin agrupacion de boxes */
+
+/* _________________________________________________________________________________________________________________________________*/
+/* SAPEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+/* faq.html */
+
+/* Inicio definicion de grilla para el faq.html*/
+.faq-page-container{
+    width: 100%;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "header header header"
+    "faq    faq    faq"
+    "footer footer footer";  
+}
+/* Fin definicion de grilla para el faq.html*/
+
+/* Inicio definicion de filas y columnas */
+.faq{
+    grid-area:faq;
+}
+/* Fin definicion de filas y columnas */
+
+/* Inicio modificacion para las preguntas y respuestas */
+.preguntas{
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.respuestas{
+    margin-bottom: 10px;
+}
+.preguntas-container{
+    margin: 20px;
+    padding: 20px 0;
+}
+/* Fin modificacion para las preguntas y respuestas */
+
+/* _________________________________________________________________________________________________________________________________*/
+
+/* contacto.html */
+
+/* Inicio definicion de grilla para el contacto.html*/
+.contacto-page-container{
+    width: 100%;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "header header header"
+    "contacto contacto contacto"
+    "footer footer footer";  
+}
+/* Fin definicion de grilla para el contacto.html*/
+
+/* Inicio definicion del area contacto */
+.contacto{
+    width: 80%;
+    margin: 0 auto;
+    grid-area: contacto;
+}
+/* Fin definicion de area contacto */
+
+/* Inicio definicion del box del contacto */
+.contacto-container{
+    width: 100%;
+    box-shadow:0 0 20px 0 rgba(255,255,255, .3);
+    display: block;
+    margin:50px 0;
+}
+/* Fin definicion del box del contacto */
+
+/* Inicio modificacion para el formulario */
+.formulario-contacto-container{
+    background-color: hsl(168, 61%, 70%);
+    width: 100%;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Hago que el box de mensaje y boton de enviado ocupen todo el ancho de la columna */
+.mensaje-enviado-container{
+    display: grid;
+    grid-column: 1 / 3;
+}
+
+.formulario-contacto-container form p{
+    margin: 0;
+    padding: 1rem;
+}
+/* Modificacion de los botones y el area del texto */
+button,input,textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid hsl(168, 61%, 100%);
+}
+
+button{
+    background-color: hsl(168, 61%, 50%);
+    border: 0;
+    padding: 1rem;
+}
+
+button:hover{
+    background-color : hsl(168, 51%, 50%); 
+}
+/* Fin modificacion para el formulario */
+
+/* Inicio modificacion para el contacto */
+.informacion-contacto-container{
+    background-color: white;
+    padding: 1rem;
+}
+
+.ul-contacto-container{
+    list-style: none;
+    margin: 20px 0;
+}
+/* Fin modificacion para el contacto */
+
+/* Inicio media query  */
+
+/* Modifico la grilla para el box de contacto.html */
+@media screen and (min-width: 700px) {
+    .contacto-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+/* Fin media query */
+
+/* _________________________________________________________________________________________________________________________________*/

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyta Design</title>
+     <!-- FONT AWESOME -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Fuente Barlow Regular -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="contacto-page-container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Logo para media query -->
+            <div class="logo-media-query-container">
+                <a href="../index.html">
+                    <!-- Logo en el medio del navbar de media query -->
+                    <img src="../images/logo/logo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Icono menu media query -->
+            <input type="checkbox" id="menu-button">
+                <label for="menu-button">
+                    <img class="menu-icon" src="../images/menu-icons/menu-icon.png" alt="menu-icon">
+                </label>
+            <nav class="navbar">
+                <ul>
+                    <li class="menu-list">
+                        <a href="../index.html" class="buttons">Inicio</a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="../pages/catalogo.html" class="buttons">Catálogo</a>
+                    </li>
+
+                    <!-- Redirigo al usuario al inicio si toca el logo -->
+                    <div class="logo-container">
+                        <a href="../index.html">
+                            <!-- Logo en el medio del navbar -->
+                            <img src="../images/logo/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <li class="menu-list">
+                        <a href="../pages/faq.html" class="buttons">FAQ</a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="../pages/contacto.html" class="buttons">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Fin Header -->
+        
+        <!-- Seccion contacto -->
+        <section class="contacto">
+            <H1 class="titulo-container">Contáctanos</H1>
+
+            <div class="contacto-container">
+                <div class="formulario-contacto-container">
+                     <form action="">
+                         <p>
+                            <label>Nombre</label>
+                            <input type="text" name="nombre">
+                         </p>
+                         <p>
+                            <label>Apellido</label>
+                            <input type="text" name="apellido">
+                         </p>
+                         <p>
+                            <label>Dirección de correo</label>
+                            <input type="email" name="email">
+                         </p>
+                         <p>
+                            <label>Teléfono</label>
+                            <input type="tel" name="telefono">
+                         </p>
+                         <p class="mensaje-enviado-container">
+                            <label>Mensaje</label>
+                            <textarea name="mensaje" rows="3"></textarea>
+                         </p>
+                         <p class="mensaje-enviado-container">
+                             <button type="submit">
+                                 Enviado
+                             </button>
+                         </p>
+                     </form>
+
+                </div>
+                <div class="informacion-contacto-container">
+                    <h2>Contacto</h2>
+                    <ul class="ul-contacto-container">
+                        <li><i class="fas fa-map-marker-alt"></i>Parque Patricios</li>
+                        <li><i class="fas fa-phone"></i>1533477979</li>
+                        <li><i class="far fa-envelope"></i>Toyta75@yahoo.com</li>
+                    </ul>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A, et eos! Totam ad veritatis possimus, consequuntur et eius iure, dicta molestiae alias sequi aperiam qui officia placeat delectus, praesentium voluptatum?
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Fin seccion contacto -->
+                 <!-- Inicio footer -->
+                 <footer class="footer">
+                    <p> Seguinos en las redes <p>
+                        <!-- Redes direccionadas -->
+                        <div class="iconos-redes-container">
+                            <a href="https://web.whatsapp.com">
+                                <img src="../images/redes/whatsapp.png" alt="Whatsapp-logo" class="logos-redes">
+                            </a>
+        
+                            <a href="https://www.facebook.com">
+                                <img src="../images/redes/facebook.png" alt="Facebook-logo" class="logos-redes">
+                            </a>
+        
+                            <a href="https://twitter.com/home">
+                                <img src="../images/redes/twitter.png" alt="Twitter-logo" class="logos-redes">
+                            </a>
+        
+                            <a href="https://www.instagram.com">
+                                <img src="../images/redes/instagram.png" alt="Instagram-logo" class="logos-redes">
+                            </a>
+        
+                            <a href="https://www.tiktok.com">
+                                <img src="../images/redes/tik-tok.png" alt="Tiktok-logo" class="logos-redes">
+                            </a>
+                        </div>
+        
+                        <p> © 2022 Toyta Design ® | Todos los derechos reservados </p>
+                </footer>
+                <!-- Fin footer -->
+    </div>
+</body> 
+
+ </html>
