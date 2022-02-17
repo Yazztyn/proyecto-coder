@@ -6,6 +6,7 @@
 /* Quito las decoraciones de los links */
 a{
     text-decoration: none;
+    color: white;
 }
 
 /* Inicio modificacion del body */
@@ -21,64 +22,16 @@ body{
 
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container{
-    margin-top: 80px;
+    margin-top: 90px;
     margin-bottom: 20px;
     text-align: center;
     color: hsl(168, 61%, 100%);
+    animation: slideInDown;/* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s; /* don't forget to set a duration! */
 }
 /* Fin configuracion para los titulos de las pages */
 
 /* Fin modificacion para elementos globales */
-
-/* Inicio definicion de grilla para el index.html*/
-.contenedor{
-    width: 100%;
-    display:grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(6,auto);
-    grid-template-areas: 
-    "header header header"
-    "inicio inicio inicio"
-    "catalogo catalogo catalogo"
-    "somos somos clientes"
-    "publicidad publicidad clientes"
-    "footer footer footer";         
-}
-/* Fin definicion de grilla para el index.html*/
-
-/* Inicio definicion de filas y columnas */
-.header{
-    grid-area: header;
-}
-
-.inicio{
-    grid-area:inicio;
-}
-
-.catalogo{
-    grid-area:catalogo;
-}
-
-.somos{
-    grid-area: somos;
-   
-}
-
-.clientes{
-    grid-area: clientes;
-}
-.publicidad{
-    grid-area: publicidad;
-}
-
-.footer{
-    grid-area: footer;
-    background-color: hsl(168, 61%, 100%);
-    position: absolute;
-    bottom: 0;    
-}
-/* Fin definicion de filas y columnas */
 
 /* Inicio ocultacion de icono del menu */
 header label{
@@ -91,7 +44,7 @@ header label{
 /* Fin ocultacion icono del menu */
 
 /* Inicio navbar fixed*/
-.navbar{
+.navbar-inicio{
     width: 100%;
     height: 5.50rem;
     line-height: 5.50rem;
@@ -104,11 +57,12 @@ header label{
 /* Fin navbar fixed*/
 
 /* Inicio modificacion del navbar horizontal */
-.navbar ul{
+.navbar-inicio ul{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 100%;
 }
 /* Fin modificacion del navbar horizontal */
 
@@ -147,9 +101,8 @@ header label{
     height:5.30rem;
     width: 5.30rem;
     margin: 0 35px;
-    margin-top: 1px;
+    margin-bottom: 4.5px;
 }
-
 /* Fin ajustes del logo principal */
 
 /* Inicio modificacion de logos redes */
@@ -165,23 +118,6 @@ header label{
 }
 /* Fin ocultacion del logo principal para media query */
 
-/* Inicio modificacion de las cajas*/
-.producto{
-    width:100%;
-    height: auto;
-}
-.producto-descripcion-container{
-    padding: 30px;
-}
-.catalogo-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap:wrap;
-    width: 100%;
-}
-/* Fin modificacion de las cajas*/
-
-
 /* Inicio modificacion de los titulos y menu */
 h1,h2{
     font-size: 30px;
@@ -190,10 +126,15 @@ h1,h2{
 }
 /* Fin modificacion de los titulos y menu */
 
+.container-fluid{
+    width: 80%;
+}
+
 /* Inicio modificacion del flyer */
 .flyer{
     width:100%;
     height:auto;
+    margin-top: 100px;
 }
 /* Fin modificacion del flyer */
 
@@ -205,18 +146,29 @@ h1,h2{
 }
 /* Fin modificacion del publicidad*/
 
-/* Inicio separacion footer-paragraph */
-.footer{
-    margin-top: 1.87rem;
+/* Inicio modificacion de las cajas*/
+.producto{
+    width:100%;
+    height: auto;
+}
+
+.catalogo-container{
+    display: flex;
+    justify-content:space-around;
     width: 100%;
 }
-/* Fin separacion footer-paragraph */
-
-/* Inicio limitacion del parrafo somos */
-.somos-paragraph,.clientes-image{
-    margin-top: 1.25rem;
+.mid-box{
+    padding: 0 5px;
 }
-/* Fin limitacion del parrafo somos */
+
+.left-box{
+    padding-right: 10px;
+}
+
+.right-box{
+    padding-left: 10px;
+}
+/* Fin modificacion de las cajas*/
 
 /* Inicio modificacion de tamaño clientes */
 .clientes-image{
@@ -225,29 +177,22 @@ h1,h2{
 }
 /* Fin modificacion del tamaño clientes  */
 
-/* Inicio separacion entre el navbar y el inicio */
-.inicio{
-    margin-top:6rem;
+/* Inicio modificacion de logos redes */
+.logos-redes{
+    width: 3.12rem;
+    height: 3.12rem;
 }
-/* Fin separacion entre el navbar y el inicio */
+/* Fin modificacion de logos redes */
 
-
-/* Inicio media query para index.html */
-
-/* Medidas para desktop */
-@media screen and (max-width:1200px){
-    /* Reacomodo la grilla */
-    .contenedor{
-        grid-template-areas: 
-        "header header header"
-        "inicio inicio inicio"
-        "catalogo catalogo catalogo"
-        "somos somos somos"
-        "publicidad publicidad publicidad"
-        "clientes clientes clientes"
-        "footer footer footer";  
-    }
+/* Inicio separacion footer-paragraph */
+.footer{
+    margin-top: 1.87rem;
+    width: 100%;
+    background-color: white;
 }
+/* Fin separacion footer-paragraph */
+
+/* _________________________________________________________________________________________________________________________________*/
 /* Medida para tablets */
 @media screen and (max-width:992px){
     .contenedor{
@@ -273,7 +218,7 @@ h1,h2{
     /* Fin header */
 
     /* Inicio navbar vertical */
-    .navbar:not(.logo-container){
+    .navbar-inicio:not(.logo-container){
         position: absolute;
         top: 50px;
         background-color: hsl(168, 51%, 70%);
@@ -286,7 +231,10 @@ h1,h2{
     ul:not(.logo-container){
         flex-direction: column;
         position: relative;
-        width: 100%;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        
     }
     /* Fin navbar vertical */
 
@@ -308,7 +256,7 @@ h1,h2{
     /* Fin modificacion del logo en media query */
 
     /* Inicio activacion y modificacion del boton menu */
-    #menu-button:checked ~ .navbar{
+    #menu-button:checked ~ .navbar-inicio{
         margin: 0;
     }
     .menu-icon{
@@ -323,192 +271,18 @@ h1,h2{
 
 /* _________________________________________________________________________________________________________________________________*/
 
-/* Catalogo.html */
+/* Contacto */
 
-/* Inicio definicion de grilla para el catalogo.html*/
- .catalogo-page-container{
-    width: 100%;
-    display:grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,auto);
-    grid-template-areas: 
-    "header header header"
-    "productos productos productos"
-    "footer footer footer";  
- }
-/* Fin definicion de grilla para el catalogo.html*/
-
-/* Inicio definicion de filas y columnas */
-
-.productos{
-    grid-area:productos;
-}
-
-/* Fin definicion de filas y columnas */
-
-/* Inicio agrupacion de boxes */
-
-.boxes-container1{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.boxes-container2{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.boxes-container3{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.boxes-container4{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-/* Fin agrupacion de boxes */
-
-/* _________________________________________________________________________________________________________________________________*/
-/* faq.html */
-
-/* Inicio definicion de grilla para el faq.html*/
-.faq-page-container{
-    width: 100%;
-    display:grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,auto);
-    grid-template-areas: 
-    "header header header"
-    "faq    faq    faq"
-    "footer footer footer";  
-}
-/* Fin definicion de grilla para el faq.html*/
-
-/* Inicio definicion de filas y columnas */
-.faq{
-    grid-area:faq;
-}
-/* Fin definicion de filas y columnas */
-
-/* Inicio modificacion para las preguntas y respuestas */
-.preguntas{
-    font-weight: bold;
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-.respuestas{
-    margin-bottom: 10px;
-}
-.preguntas-container{
-    margin: 20px;
-    padding: 20px 0;
-}
-/* Fin modificacion para las preguntas y respuestas */
-
-/* _________________________________________________________________________________________________________________________________*/
-
-/* contacto.html */
-
-/* Inicio definicion de grilla para el contacto.html*/
-.contacto-page-container{
-    width: 100%;
-    display:grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,auto);
-    grid-template-areas: 
-    "header header header"
-    "contacto contacto contacto"
-    "footer footer footer";  
-}
-/* Fin definicion de grilla para el contacto.html*/
-
-/* Inicio definicion del area contacto */
-.contacto{
-    width: 80%;
-    margin: 0 auto;
-    grid-area: contacto;
-}
-/* Fin definicion de area contacto */
-
-/* Inicio definicion del box del contacto */
-.contacto-container{
-    width: 100%;
-    box-shadow:0 0 20px 0 rgba(255,255,255, .3);
-    display: block;
-    margin:50px 0;
-}
-/* Fin definicion del box del contacto */
-
-/* Inicio modificacion para el formulario */
-.formulario-contacto-container{
+.formulario{
+    border: 4px solid white;
     background-color: hsl(168, 61%, 70%);
-    width: 100%;
-}
-form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-/* Hago que el box de mensaje y boton de enviado ocupen todo el ancho de la columna */
-.mensaje-enviado-container{
-    display: grid;
-    grid-column: 1 / 3;
+    padding-bottom: 15px;
 }
 
-.formulario-contacto-container form p{
-    margin: 0;
-    padding: 1rem;
-}
-/* Modificacion de los botones y el area del texto */
-button,input,textarea{
-    width: 100%;
-    border: none;
-    background: none;
-    outline: 0;
-    color: #fff;
-    border-bottom: 1px solid hsl(168, 61%, 100%);
-}
-button{
+.button-formulario{
+    color: white ;
     background-color: hsl(168, 61%, 50%);
-    border: 0;
-    padding: 1rem;
+    border-color: hsl(168, 61%, 50%);
 }
 
-button:hover{
-    background-color : hsl(168, 51%, 50%);
-}
-/* Fin modificacion para el formulario */
 
-/* Inicio modificacion para el contacto */
-.informacion-contacto-container{
-    background-color: white;
-    padding: 1rem;
-}
-
-.ul-contacto-container{
-    list-style: none;
-    margin: 20px 0;
-}
-/* Fin modificacion para el contacto */
-
-/* Inicio media query  */
-
-/* Modifico la grilla para el box de contacto.html */
-@media screen and (min-width: 700px) {
-    .contacto-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-}
-/* Fin media query */
-
-/* _________________________________________________________________________________________________________________________________*/
