@@ -8,6 +8,9 @@ a{
     text-decoration: none;
     color: white;
 }
+html{
+    height: 100%;
+}
 
 /* Inicio modificacion del body */
 body{
@@ -15,8 +18,6 @@ body{
     font-size:20px;
     background-color: hsl(168, 51%, 85%);
     position: relative;
-    padding-bottom: 7rem;
-    min-height: 100vh;
 }
 /* Fin modificacion del body*/
 
@@ -32,6 +33,12 @@ body{
 /* Fin configuracion para los titulos de las pages */
 
 /* Fin modificacion para elementos globales */
+
+/* Inicio definicion del tamaño del main */
+.container-fluid{
+    width: 80%;
+}
+/* Fin definicion del tamaño del main */
 
 /* Inicio ocultacion de icono del menu */
 header label{
@@ -126,10 +133,6 @@ h1,h2{
 }
 /* Fin modificacion de los titulos y menu */
 
-.container-fluid{
-    width: 80%;
-}
-
 /* Inicio modificacion del flyer */
 .flyer{
     width:100%;
@@ -170,13 +173,6 @@ h1,h2{
 }
 /* Fin modificacion de las cajas*/
 
-/* Inicio modificacion de tamaño clientes */
-.clientes-image{
-    width:100%;
-    height: auto;
-}
-/* Fin modificacion del tamaño clientes  */
-
 /* Inicio modificacion de logos redes */
 .logos-redes{
     width: 3.12rem;
@@ -184,13 +180,14 @@ h1,h2{
 }
 /* Fin modificacion de logos redes */
 
-/* Inicio separacion footer-paragraph */
+/* Inicio customizacion del footer */
 .footer{
-    margin-top: 1.87rem;
+    margin-top: 1.80rem;
     width: 100%;
     background-color: white;
+
 }
-/* Fin separacion footer-paragraph */
+/* Fin customizacion del footer */
 
 /* _________________________________________________________________________________________________________________________________*/
 /* Medida para tablets */
@@ -270,7 +267,18 @@ h1,h2{
 /* Fin media query para index.html */
 
 /* _________________________________________________________________________________________________________________________________*/
+/* FAQ */
 
+.accordion{
+
+    position: static;
+}
+
+.accordion-item{
+    background-color: hsl(168, 61%, 70%);
+}
+
+/* _________________________________________________________________________________________________________________________________*/
 /* Contacto */
 
 .formulario{
@@ -285,4 +293,5 @@ h1,h2{
     border-color: hsl(168, 61%, 50%);
 }
 
+/* _________________________________________________________________________________________________________________________________*/
 
