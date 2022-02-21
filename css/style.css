@@ -20,7 +20,7 @@ html{
 body{
     font-family: 'Barlow', sans-serif;
     font-size:20px;
-    background-color: #C2E8E0;
+    background-color: hsl(166, 53%, 85%);
     position: relative;
     min-height: 100%;
 }
@@ -29,7 +29,7 @@ body{
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container{
     margin-top: 90px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
     color: white;
     animation: slideInDown;
@@ -38,12 +38,6 @@ body{
 /* Fin configuracion para los titulos de las pages */
 
 /* Fin modificacion para elementos globales */
-
-/* Inicio definicion del tamaño del main */
-.container-fluid{
-    width: 80%;
-}
-/* Fin definicion del tamaño del main */
 
 /* Inicio ocultacion de icono del menu */
 header label{
@@ -60,7 +54,7 @@ header label{
     width: 100%;
     height: 5.50rem;
     line-height: 5.50rem;
-    background-color: #83E4CE;
+    background-color: hsl(166, 53%, 65%);
     position: fixed;
     display: flex;
     top: 0;
@@ -96,7 +90,7 @@ header label{
 
 /* Inicio pseudoclase para los botones */
 .menu-list:hover{
-    background-color : hsl(168, 51%, 50%); 
+    background-color : hsl(166, 53%, 55%); 
 }
 /* Fin pseudoclase para los botones */
 
@@ -134,8 +128,8 @@ header label{
 /* Inicio modificacion de los titulos y menu */
 h1,h2{
     font-size: 30px;
-    animation: slideInDown;/* referring directly to the animation's @keyframe declaration */
-    animation-duration: 0.5s; /* don't forget to set a duration! */
+    animation: slideInDown;
+    animation-duration: 0.5s; 
 }
 /* Fin modificacion de los titulos y menu */
 
@@ -183,20 +177,24 @@ h1,h2{
 .logos-redes{
     width: 3.12rem;
     height: 3.12rem;
+    margin-bottom: 15px;
 }
 /* Fin modificacion de logos redes */
 
 /* Inicio customizacion del footer */
 .footer{
     margin-top: 1.80rem;
-    width: 100%;
     height: auto;
-    background-color: white;
+    background-color: hsl(166, 53%, 65%);
     position: relative;
     bottom: 0;
 }
 .copy-footer{
-    background-color: black;
+    text-align: center;
+}
+.redes-text-footer{
+    text-align: center;
+    font-size: 26px;
 }
 /* Fin customizacion del footer */
 
@@ -219,7 +217,7 @@ h1,h2{
         width: 100%;
         height: 5.5rem;
         line-height: 5.50rem;
-        background-color: hsl(168, 61%, 70%);
+        background-color: hsl(166, 53%, 65%);
         position: fixed;
         top: 0;
         /* Hago que el navbar siempre se sobreponga */
@@ -231,7 +229,7 @@ h1,h2{
     .navbar-inicio:not(.logo-container){
         position: absolute;
         top: 50px;
-        background-color: hsl(168, 51%, 70%);
+        background-color: hsl(166, 53%, 55%);
         width: auto;
         height: auto;
         margin-left:-70%;
@@ -289,7 +287,7 @@ h1,h2{
 }
 
 .accordion-item{
-    background-color: hsl(168, 61%, 70%);
+    background-color: hsl(166, 53%, 75%);
 }
 
 /* _________________________________________________________________________________________________________________________________*/
@@ -297,14 +295,21 @@ h1,h2{
 
 .formulario{
     border: 4px solid white;
-    background-color: hsl(168, 61%, 70%);
+    background-color: hsl(166, 53%, 75%);
     padding-bottom: 15px;
+    margin-top: 10px;
 }
 
 .button-formulario{
     color: white ;
-    background-color: hsl(168, 61%, 50%);
-    border-color: hsl(168, 61%, 50%);
+    background-color: hsl(166, 53%, 65%);
+    border-color: hsl(166, 53%, 65%);
+}
+
+.button-formulario:hover{
+    background-color: hsl(166, 53%, 50%);
+    border-color:hsl(166, 53%, 50%) ;
+
 }
 
 /* _________________________________________________________________________________________________________________________________*/
