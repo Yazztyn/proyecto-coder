@@ -149,31 +149,19 @@ h1,h2{
 }
 /* Fin modificacion del publicidad*/
 
-/* Inicio modificacion de las cajas*/
+/* Inicio modificacion del catalogo */
 .producto{
     width:100%;
     height: auto;
 }
-
 .catalogo-container{
-    display: flex;
-    justify-content:space-around;
     width: 100%;
-}
-.mid-box{
-    padding: 0 5px;
-}
-
-.left-box{
-    padding-right: 10px;
-}
-
-.right-box{
-    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 /* Fin modificacion de las cajas*/
 
-/* Inicio modificacion de logos redes */
+/* Inicio modificacion del catalogo */
 .logos-redes{
     width: 3.12rem;
     height: 3.12rem;
@@ -216,7 +204,7 @@ h1,h2{
     .header{
         width: 100%;
         height: 5.5rem;
-        line-height: 5.50rem;
+        line-height: 5.5rem;
         background-color: hsl(166, 53%, 65%);
         position: fixed;
         top: 0;
@@ -271,10 +259,15 @@ h1,h2{
         width: 3.12rem;
         margin-bottom: 1.87rem;
         position: absolute;
-        top: 0px;
+        top: 0;
+    }
+    .catalogo-container{
+        display: flex;
+        justify-content: center;
     }
     /* Fin activacion y modificacion del boton menu */
 }
+
 /* Fin media query para index.html */
 
 /* _________________________________________________________________________________________________________________________________*/
@@ -289,7 +282,6 @@ h1,h2{
 .accordion-item{
     background-color: hsl(166, 53%, 75%);
 }
-
 /* _________________________________________________________________________________________________________________________________*/
 /* Contacto */
 
@@ -311,6 +303,5 @@ h1,h2{
     border-color:hsl(166, 53%, 50%) ;
 
 }
-
 /* _________________________________________________________________________________________________________________________________*/
 
