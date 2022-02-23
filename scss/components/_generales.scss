@@ -1,0 +1,48 @@
+@import "../base/_variables.scss";
+@import "../base/_extends.scss";
+
+/* Inicio modificacion para elementos globales */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box
+}
+/* Quito las decoraciones de los links */
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+html{
+    height: 100%;
+}
+
+/* Inicio modificacion del body */
+body{
+    font-family: $font;
+    font-size:$font-body;
+    background-color: $bg-color-body;
+    position: relative;
+    min-height: 100%;
+}
+/* Fin modificacion del body*/
+
+/* Inicio configuracion para los titulos de las pages */
+.titulo-container{
+    margin-top: 90px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $color-white;
+    @extend %animaciones;
+}
+/* Fin configuracion para los titulos de las pages */
+
+/* Inicio modificacion de los titulos y menu */
+h1,h2{
+    font-size: font-titulos;
+    @extend %animaciones;
+}
+/* Fin modificacion de los titulos y menu */
+
+/* Fin modificacion para elementos globales */

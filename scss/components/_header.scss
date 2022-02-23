@@ -1,0 +1,168 @@
+@import "../base/_variables.scss";
+@import "../base/_extends.scss";
+
+/* Inicio ocultacion de icono del menu */
+header {
+	label {
+		display: none;
+	}
+}
+#menu-button {
+	display: none;
+}
+/* Fin ocultacion icono del menu */
+
+/* Fin modificacion del navbar */
+.navbar-inicio {
+	width: 100%;
+	height: 5.50rem;
+	line-height: 5.50rem;
+	background-color: $bg-color-nav-foot;
+	position: fixed;
+	display: flex;
+	top: 0;
+	z-index: 3;
+	ul {
+        @extend %flex-center;
+		width: 100%;
+		flex-direction: row;
+		height: 100%;
+		position: relative;
+		right: 20px;
+	}
+}
+/* Fin modificacion del navbar  */
+
+/* Inicio modificacion de li del navbar*/
+.menu-list {
+	list-style: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	display: flex;
+	padding: 0 auto;
+	flex-direction: row;
+	text-decoration: none;
+	&:hover {
+		background-color: $bg-color-hover;
+	}
+}
+/* Fin modificacion de li del navbar*/
+
+/* Inicio modificacion y detalles de los botones del navbar*/
+.buttons {
+	padding: 0 40px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	width: 100%;
+}
+/* Fin modificacion y detalles de los botones del navbar */
+
+/* Inicio ajustes del logo principal */
+.logo{
+    height:5.30rem;
+    width: 5.30rem;
+    margin: 0 35px;
+    margin-bottom: 4.5px;
+}
+/* Fin ajustes del logo principal */
+
+/* Inicio ocultacion del logo principal para media query */
+.logo-media-query-container{
+    display: none;
+}
+/* Fin ocultacion del logo principal para media query */
+
+/* Inicio media query para index.html */
+@media screen and (max-width:992px){
+    .contenedor{
+        width: 100%;
+    }
+    /* Inicio boton menu estatico */
+    header {
+		label {
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+	}
+    /* Fin boton menu estatico */
+
+    /* Inicio header */
+    .header{
+        width: 100%;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        background-color: $bg-color-nav-foot;
+        position: fixed;
+        top: 0;
+        /* Hago que el navbar siempre se sobreponga */
+        z-index: 3;
+    }
+    /* Fin header */
+
+    /* Inicio navbar vertical */
+    .navbar-inicio {
+		&:not(.logo-container) {
+			position: absolute;
+			top: 50px;
+			background-color: $bg-color-nav-foot;
+			width: 15%;
+			height: auto;
+			margin-left: -70%;
+			transition: all 1s;
+		}
+	}   
+    
+    ul {
+		&:not(.logo-container) {
+			flex-direction: column;
+			position: relative;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+            right: 0;
+		}
+	}
+    /* Fin navbar vertical */
+
+    /* Inicio ocultacion del logo principal */
+    .logo-container{
+        display: none;
+    }
+    /* Fin ocultacion del logo principal */
+
+    /* Inicio modificacion del logo en media query */
+    .logo-media-query-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 0.625rem;
+        height: 30px;
+    }
+    /* Fin modificacion del logo en media query */
+
+    /* Inicio activacion y modificacion del boton menu */
+    #menu-button {
+		&:checked {
+			~ {
+				.navbar-inicio {
+					margin: 0;
+				}
+			}
+		}
+	}
+    .menu-icon{
+        width: 3.12rem;
+        margin-bottom: 1.87rem;
+        position: absolute;
+        top: 0;
+    }
+    .catalogo-container{
+        display: flex;
+        justify-content: center;
+    }
+    /* Fin activacion y modificacion del boton menu */
+}
+
+/* Fin media query para index.html */

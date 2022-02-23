@@ -1,307 +1,348 @@
+/* Font Sizes */
+.navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, .titulo-container {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
+
 /* Inicio modificacion para elementos globales */
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 /* Quito las decoraciones de los links */
-a{
-    text-decoration: none;
-    color:none
+a {
+  text-decoration: none;
 }
-ul{
-    list-style: none;
+
+ul {
+  list-style: none;
 }
-html{
-    height: 100%;
+
+html {
+  height: 100%;
 }
 
 /* Inicio modificacion del body */
-body{
-    font-family: 'Barlow', sans-serif;
-    font-size:20px;
-    background-color: hsl(166, 53%, 85%);
-    position: relative;
-    min-height: 100%;
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  background-color: #c4ede4;
+  position: relative;
+  min-height: 100%;
 }
+
 /* Fin modificacion del body*/
-
 /* Inicio configuracion para los titulos de las pages */
-.titulo-container{
-    margin-top: 90px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: white;
-    animation: slideInDown;
-    animation-duration: 0.5s; 
+.titulo-container {
+  margin-top: 90px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
 }
-/* Fin configuracion para los titulos de las pages */
 
+/* Fin configuracion para los titulos de las pages */
+/* Inicio modificacion de los titulos y menu */
+h1, h2 {
+  font-size: font-titulos;
+}
+
+/* Fin modificacion de los titulos y menu */
 /* Fin modificacion para elementos globales */
+/* Font Sizes */
+.navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
 /* Inicio ocultacion de icono del menu */
-header label{
-    display: none;
+header label {
+  display: none;
 }
 
-#menu-button{
-    display: none;
+#menu-button {
+  display: none;
 }
+
 /* Fin ocultacion icono del menu */
+/* Fin modificacion del navbar */
+.navbar-inicio {
+  width: 100%;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  background-color: #76d5bf;
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 3;
+}
+.navbar-inicio ul {
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  right: 20px;
+}
 
-/* Inicio navbar fixed*/
-.navbar-inicio{
+/* Fin modificacion del navbar  */
+/* Inicio modificacion de li del navbar*/
+.menu-list {
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  padding: 0 auto;
+  flex-direction: row;
+  text-decoration: none;
+}
+.menu-list:hover {
+  background-color: #4fc9ad;
+}
+
+/* Fin modificacion de li del navbar*/
+/* Inicio modificacion y detalles de los botones del navbar*/
+.buttons {
+  padding: 0 40px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+
+/* Fin modificacion y detalles de los botones del navbar */
+/* Inicio ajustes del logo principal */
+.logo {
+  height: 5.3rem;
+  width: 5.3rem;
+  margin: 0 35px;
+  margin-bottom: 4.5px;
+}
+
+/* Fin ajustes del logo principal */
+/* Inicio ocultacion del logo principal para media query */
+.logo-media-query-container {
+  display: none;
+}
+
+/* Fin ocultacion del logo principal para media query */
+/* Inicio media query para index.html */
+@media screen and (max-width: 992px) {
+  .contenedor {
     width: 100%;
-    height: 5.50rem;
-    line-height: 5.50rem;
-    background-color: hsl(166, 53%, 65%);
+  }
+
+  /* Inicio boton menu estatico */
+  header label {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Fin boton menu estatico */
+  /* Inicio header */
+  .header {
+    width: 100%;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    background-color: #76d5bf;
     position: fixed;
-    display: flex;
     top: 0;
     /* Hago que el navbar siempre se sobreponga */
     z-index: 3;
-}
-/* Fin navbar fixed*/
+  }
 
-/* Inicio modificacion del navbar horizontal */
-.navbar-inicio ul{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100%;
+  /* Fin header */
+  /* Inicio navbar vertical */
+  .navbar-inicio:not(.logo-container) {
+    position: absolute;
+    top: 50px;
+    background-color: #76d5bf;
+    width: 15%;
+    height: auto;
+    margin-left: -70%;
+    transition: all 1s;
+  }
+
+  ul:not(.logo-container) {
+    flex-direction: column;
     position: relative;
-    right: 20px;
-}
-/* Fin modificacion del navbar horizontal */
-
-/* Inicio modificacion de li del navbar*/
-.menu-list{
-    list-style: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-    display: flex;
-    padding: 0 auto;
-    flex-direction: row;
-    text-decoration: none;
-}
-/* Fin modificacion de li del navbar*/
-
-/* Inicio pseudoclase para los botones */
-.menu-list:hover{
-    background-color : hsl(166, 53%, 55%); 
-}
-/* Fin pseudoclase para los botones */
-
-/* Inicio modificacion y detalles de los botones del navbar*/
-.buttons{   
-    padding: 0 40px;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.3) ;
     width: 100%;
-    text-decoration: none;
-}
-/* Fin modificacion y detalles de los botones del navbar */
+    padding: 0;
+    margin: 0;
+    right: 0;
+  }
 
-/* Inicio ajustes del logo principal */
-.logo{
-    height:5.30rem;
-    width: 5.30rem;
-    margin: 0 35px;
-    margin-bottom: 4.5px;
+  /* Fin navbar vertical */
+  /* Inicio ocultacion del logo principal */
+  .logo-container {
+    display: none;
+  }
+
+  /* Fin ocultacion del logo principal */
+  /* Inicio modificacion del logo en media query */
+  .logo-media-query-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0.625rem;
+    height: 30px;
+  }
+
+  /* Fin modificacion del logo en media query */
+  /* Inicio activacion y modificacion del boton menu */
+  #menu-button:checked ~ .navbar-inicio {
+    margin: 0;
+  }
+
+  .menu-icon {
+    width: 3.12rem;
+    margin-bottom: 1.87rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .catalogo-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Fin activacion y modificacion del boton menu */
 }
-/* Fin ajustes del logo principal */
+/* Fin media query para index.html */
+/* Font Sizes */
+.navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
+
+/* Inicio modificacion del flyer inicio */
+.flyer {
+  margin-top: 100px;
+}
+
+/* Fin modificacion del flyer inicio */
+/* Inicio modificacion del flyer publicidad */
+.flyer-publicidad {
+  margin-top: 1.87rem;
+}
+
+/* Fin modificacion del flyer publicidad*/
+/* Inicio modificacion del catalogo */
+.catalogo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Fin modificacion de las cajas*/
+/* Font Sizes */
+.navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
 /* Inicio modificacion de logos redes */
-.logos-redes{
-    width: 3.12rem;
-    height: 3.12rem;
+.logos-redes-container {
+  display: flex;
+  justify-content: space-evenly;
 }
+
+.logos-redes {
+  width: 3.12rem;
+  height: 3.12rem;
+  margin-bottom: 15px;
+}
+
 /* Fin modificacion de logos redes */
-
-/* Inicio ocultacion del logo principal para media query */
-.logo-media-query-container{
-    display: none;
-}
-/* Fin ocultacion del logo principal para media query */
-
-/* Inicio modificacion de los titulos y menu */
-h1,h2{
-    font-size: 30px;
-    animation: slideInDown;
-    animation-duration: 0.5s; 
-}
-/* Fin modificacion de los titulos y menu */
-
-/* Inicio modificacion del flyer */
-.flyer{
-    width:100%;
-    height:auto;
-    margin-top: 100px;
-}
-/* Fin modificacion del flyer */
-
-/* Inicio modificacion del publicidad */
-.flyer-publicidad{
-    width:100%;
-    height:auto;
-    margin-top: 1.87rem;
-}
-/* Fin modificacion del publicidad*/
-
-/* Inicio modificacion del catalogo */
-.producto{
-    width:100%;
-    height: auto;
-}
-.catalogo-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-/* Fin modificacion de las cajas*/
-
-/* Inicio modificacion del catalogo */
-.logos-redes{
-    width: 3.12rem;
-    height: 3.12rem;
-    margin-bottom: 15px;
-}
-/* Fin modificacion de logos redes */
-
 /* Inicio customizacion del footer */
-.footer{
-    margin-top: 1.80rem;
-    height: auto;
-    background-color: hsl(166, 53%, 65%);
-    position: relative;
-    bottom: 0;
+.footer {
+  margin-top: 1.8rem;
+  height: auto;
+  background-color: #76d5bf;
+  position: relative;
+  bottom: 0;
 }
-.copy-footer{
-    text-align: center;
+
+.copy-footer {
+  text-align: center;
 }
-.redes-text-footer{
-    text-align: center;
-    font-size: 26px;
+
+.redes-text-footer {
+  text-align: center;
+  font-size: 26px;
 }
+
 /* Fin customizacion del footer */
-
-/* _________________________________________________________________________________________________________________________________*/
-/* Medida para tablets */
-@media screen and (max-width:992px){
-    .contenedor{
-        width: 100%;
-    }
-    /* Inicio boton menu estatico */
-    header label{
-        display: block;
-        width:30px;
-        height: 30px;
-    }
-    /* Fin boton menu estatico */
-
-    /* Inicio header */
-    .header{
-        width: 100%;
-        height: 5.5rem;
-        line-height: 5.5rem;
-        background-color: hsl(166, 53%, 65%);
-        position: fixed;
-        top: 0;
-        /* Hago que el navbar siempre se sobreponga */
-        z-index: 3;
-    }
-    /* Fin header */
-
-    /* Inicio navbar vertical */
-    .navbar-inicio:not(.logo-container){
-        position: absolute;
-        top: 50px;
-        background-color: hsl(166, 53%, 55%);
-        width: auto;
-        height: auto;
-        margin-left:-70%;
-        transition: all 1s;
-    }
-    
-    ul:not(.logo-container){
-        flex-direction: column;
-        position: relative;
-        width: auto;
-        padding: 0;
-        margin: 0;
-        
-    }
-    /* Fin navbar vertical */
-
-    /* Inicio ocultacion del logo principal */
-    .logo-container{
-        display: none;
-    }
-    /* Fin ocultacion del logo principal */
-
-    /* Inicio modificacion del logo en media query */
-    .logo-media-query-container{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        left: 0.625rem;
-        width: 100%;
-        height: 30px;
-    }
-    /* Fin modificacion del logo en media query */
-
-    /* Inicio activacion y modificacion del boton menu */
-    #menu-button:checked ~ .navbar-inicio{
-        margin: 0;
-    }
-    .menu-icon{
-        width: 3.12rem;
-        margin-bottom: 1.87rem;
-        position: absolute;
-        top: 0;
-    }
-    .catalogo-container{
-        display: flex;
-        justify-content: center;
-    }
-    /* Fin activacion y modificacion del boton menu */
+/* Font Sizes */
+.navbar-inicio ul {
+  display: flex;
+  justify-content: center;
 }
 
-/* Fin media query para index.html */
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
-/* _________________________________________________________________________________________________________________________________*/
 /* FAQ */
-
-.accordion{
-    /* Evito que el FAQ se sobreponga */
-    z-index: 1;
-   
+.accordion {
+  /* Evito que el FAQ se sobreponga */
+  z-index: 1;
 }
 
-.accordion-item{
-    background-color: hsl(166, 53%, 75%);
+.accordion-item {
+  background-color: #9de1d1;
 }
-/* _________________________________________________________________________________________________________________________________*/
+
+/* Font Sizes */
+.navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
+
 /* Contacto */
-
-.formulario{
-    border: 4px solid white;
-    background-color: hsl(166, 53%, 75%);
-    padding-bottom: 15px;
-    margin-top: 10px;
+.formulario {
+  border: 4px solid white;
+  background-color: #9de1d1;
+  padding-bottom: 15px;
+  margin-top: 10px;
 }
 
-.button-formulario{
-    color: white ;
-    background-color: hsl(166, 53%, 65%);
-    border-color: hsl(166, 53%, 65%);
+.button-formulario {
+  color: white;
+  background-color: #76d5bf;
+  border-color: #76d5bf;
 }
 
-.button-formulario:hover{
-    background-color: hsl(166, 53%, 50%);
-    border-color:hsl(166, 53%, 50%) ;
-
+.button-formulario:hover {
+  background-color: #4fc9ad;
+  border-color: #4fc9ad;
 }
-/* _________________________________________________________________________________________________________________________________*/
 
+/*# sourceMappingURL=style.css.map */

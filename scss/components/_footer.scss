@@ -1,0 +1,31 @@
+@import "../base/_variables.scss";
+@import "../base/_extends.scss";
+
+/* Inicio modificacion de logos redes */
+.logos-redes-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.logos-redes{
+    width: 3.12rem;
+    height: 3.12rem;
+    margin-bottom: 15px;
+}
+/* Fin modificacion de logos redes */
+
+/* Inicio customizacion del footer */
+.footer{
+    margin-top: 1.80rem;
+    height: auto;
+    background-color:$bg-color-nav-foot;
+    position: relative;
+    bottom: 0;
+}
+.copy-footer{
+    text-align: center;
+}
+.redes-text-footer{
+    text-align: center;
+    font-size: 26px;
+}
+/* Fin customizacion del footer */

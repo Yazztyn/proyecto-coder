@@ -1,0 +1,22 @@
+@import "../base/_variables.scss";
+@import "../base/_extends.scss";
+
+/* Inicio modificacion del flyer inicio */
+.flyer{
+    margin-top: 100px;
+}
+/* Fin modificacion del flyer inicio */
+
+/* Inicio modificacion del flyer publicidad */
+.flyer-publicidad{
+    margin-top: 1.87rem;
+}
+/* Fin modificacion del flyer publicidad*/
+
+/* Inicio modificacion del catalogo */
+.catalogo-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* Fin modificacion de las cajas*/
