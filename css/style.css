@@ -1,12 +1,11 @@
-/* Font Sizes */
 .navbar-inicio ul {
   display: flex;
   justify-content: center;
 }
 
-h1, h2, .titulo-container {
-  animation: slideInDown;
-  animation-duration: 0.5s;
+.titulo-container, h1, h2 {
+    animation: slideInDown;
+    animation-duration: 0.5s;
 }
 
 /* Inicio modificacion para elementos globales */
@@ -37,8 +36,8 @@ body {
   position: relative;
   min-height: 100%;
 }
-
 /* Fin modificacion del body*/
+
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container {
   margin-top: 90px;
@@ -46,25 +45,17 @@ body {
   text-align: center;
   color: white;
 }
-
 /* Fin configuracion para los titulos de las pages */
+
 /* Inicio modificacion de los titulos y menu */
 h1, h2 {
-  font-size: font-titulos;
+  font-size: 30px;
 }
-
 /* Fin modificacion de los titulos y menu */
-/* Fin modificacion para elementos globales */
-/* Font Sizes */
-.navbar-inicio ul {
-  display: flex;
-  justify-content: center;
-}
 
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
-}
+/* Fin modificacion para elementos globales */
+
+/* Header */
 
 /* Inicio ocultacion de icono del menu */
 header label {
@@ -74,9 +65,9 @@ header label {
 #menu-button {
   display: none;
 }
-
 /* Fin ocultacion icono del menu */
-/* Fin modificacion del navbar */
+
+/* Inicio modificacion del navbar */
 .navbar-inicio {
   width: 100%;
   height: 5.5rem;
@@ -94,8 +85,8 @@ header label {
   position: relative;
   right: 20px;
 }
-
 /* Fin modificacion del navbar  */
+
 /* Inicio modificacion de li del navbar*/
 .menu-list {
   list-style: none;
@@ -110,16 +101,16 @@ header label {
 .menu-list:hover {
   background-color: #4fc9ad;
 }
-
 /* Fin modificacion de li del navbar*/
+
 /* Inicio modificacion y detalles de los botones del navbar*/
 .buttons {
   padding: 0 40px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   width: 100%;
 }
-
 /* Fin modificacion y detalles de los botones del navbar */
+
 /* Inicio ajustes del logo principal */
 .logo {
   height: 5.3rem;
@@ -127,14 +118,14 @@ header label {
   margin: 0 35px;
   margin-bottom: 4.5px;
 }
-
 /* Fin ajustes del logo principal */
+
 /* Inicio ocultacion del logo principal para media query */
 .logo-media-query-container {
   display: none;
 }
-
 /* Fin ocultacion del logo principal para media query */
+
 /* Inicio media query para index.html */
 @media screen and (max-width: 992px) {
   .contenedor {
@@ -147,8 +138,8 @@ header label {
     width: 30px;
     height: 30px;
   }
-
   /* Fin boton menu estatico */
+
   /* Inicio header */
   .header {
     width: 100%;
@@ -160,8 +151,8 @@ header label {
     /* Hago que el navbar siempre se sobreponga */
     z-index: 3;
   }
-
   /* Fin header */
+
   /* Inicio navbar vertical */
   .navbar-inicio:not(.logo-container) {
     position: absolute;
@@ -181,14 +172,14 @@ header label {
     margin: 0;
     right: 0;
   }
-
   /* Fin navbar vertical */
+
   /* Inicio ocultacion del logo principal */
   .logo-container {
     display: none;
   }
-
   /* Fin ocultacion del logo principal */
+
   /* Inicio modificacion del logo en media query */
   .logo-media-query-container {
     width: 100%;
@@ -198,8 +189,8 @@ header label {
     left: 0.625rem;
     height: 30px;
   }
-
   /* Fin modificacion del logo en media query */
+
   /* Inicio activacion y modificacion del boton menu */
   #menu-button:checked ~ .navbar-inicio {
     margin: 0;
@@ -216,51 +207,42 @@ header label {
     display: flex;
     justify-content: center;
   }
-
   /* Fin activacion y modificacion del boton menu */
 }
 /* Fin media query para index.html */
-/* Font Sizes */
-.navbar-inicio ul {
-  display: flex;
-  justify-content: center;
-}
-
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
-}
 
 /* Inicio modificacion del flyer inicio */
 .flyer {
-  margin-top: 100px;
+  margin-top: 6.25rem;
 }
-
 /* Fin modificacion del flyer inicio */
+
 /* Inicio modificacion del flyer publicidad */
 .flyer-publicidad {
   margin-top: 1.87rem;
 }
-
 /* Fin modificacion del flyer publicidad*/
+
 /* Inicio modificacion del catalogo */
 .catalogo-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
 /* Fin modificacion de las cajas*/
-/* Font Sizes */
-.navbar-inicio ul {
-  display: flex;
-  justify-content: center;
+
+/* Inicio modificacion del boton "Ir al catalogo" */
+.btn-primary {
+  color: white;
+  background-color: #76d5bf;
+  border-color: #76d5bf;
 }
 
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
+.btn-primary:hover {
+  background-color: #4fc9ad;
+  border-color: #4fc9ad;
 }
+/* Fin modificacion del boton "Ir al catalogo" */
 
 /* Inicio modificacion de logos redes */
 .logos-redes-container {
@@ -273,8 +255,8 @@ header label {
   height: 3.12rem;
   margin-bottom: 15px;
 }
-
 /* Fin modificacion de logos redes */
+
 /* Inicio customizacion del footer */
 .footer {
   margin-top: 1.8rem;
@@ -292,18 +274,7 @@ header label {
   text-align: center;
   font-size: 26px;
 }
-
 /* Fin customizacion del footer */
-/* Font Sizes */
-.navbar-inicio ul {
-  display: flex;
-  justify-content: center;
-}
-
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
-}
 
 /* FAQ */
 .accordion {
@@ -315,34 +286,12 @@ header label {
   background-color: #9de1d1;
 }
 
-/* Font Sizes */
-.navbar-inicio ul {
-  display: flex;
-  justify-content: center;
-}
-
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
-}
-
 /* Contacto */
 .formulario {
   border: 4px solid white;
   background-color: #9de1d1;
   padding-bottom: 15px;
   margin-top: 10px;
-}
-
-.button-formulario {
-  color: white;
-  background-color: #76d5bf;
-  border-color: #76d5bf;
-}
-
-.button-formulario:hover {
-  background-color: #4fc9ad;
-  border-color: #4fc9ad;
 }
 
 /*# sourceMappingURL=style.css.map */

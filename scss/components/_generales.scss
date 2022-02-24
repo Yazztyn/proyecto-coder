@@ -40,7 +40,7 @@ body{
 
 /* Inicio modificacion de los titulos y menu */
 h1,h2{
-    font-size: font-titulos;
+    font-size: $font-titulos;
     @extend %animaciones;
 }
 /* Fin modificacion de los titulos y menu */

@@ -3,7 +3,7 @@
 
 /* Inicio modificacion del flyer inicio */
 .flyer{
-    margin-top: 100px;
+    margin-top: 6.25rem;
 }
 /* Fin modificacion del flyer inicio */
 
@@ -20,3 +20,15 @@
     justify-content: space-between;
 }
 /* Fin modificacion de las cajas*/
+
+/* Inicio modificacion del boton "Ir al catalogo" */
+.btn-primary{
+    color: $color-white ;
+    background-color: $bg-color-nav-foot;
+    border-color:  $bg-color-nav-foot;
+}
+
+.btn-primary:hover{
+    background-color: $bg-color-hover;
+    border-color: $bg-color-hover ;
+}
