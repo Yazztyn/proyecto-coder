@@ -32,3 +32,10 @@
     background-color: $bg-color-hover;
     border-color: $bg-color-hover ;
 }
+
+@media screen and (max-width:992px){
+    .catalogo-container{
+        display: flex;
+        justify-content: center;
+    }
+}
