@@ -1,13 +1,13 @@
 @import "../base/_variables.scss";
 @import "../base/_extends.scss";
 
-/* Inicio modificacion para elementos globales */
+/* Modificaciones generales */
 *{
     margin:0;
     padding:0;
     box-sizing: border-box
 }
-/* Quito las decoraciones de los links */
+
 a{
     text-decoration: none;
 }

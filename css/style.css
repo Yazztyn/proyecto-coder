@@ -8,14 +8,13 @@ h1, h2, .titulo-container {
   animation-duration: 0.5s;
 }
 
-/* Inicio modificacion para elementos globales */
+/* Modificaciones generales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Quito las decoraciones de los links */
 a {
   text-decoration: none;
 }
@@ -53,98 +52,15 @@ h1, h2 {
 }
 
 /* Fin modificacion de los titulos y menu */
-/* Fin modificacion para elementos globales */
-.contenedor header .navbar-inicio ul {
-  display: flex;
-  justify-content: center;
-}
+/* Fin modificaciones generales */
 
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
-}
+/* Header */
 
-/* Inicio ocultacion de icono del menu */
-.contenedor header {
-  /* Inicio ocultacion del logo principal para media query */
-  /* Fin ocultacion del logo principal para media query */
-  /* Inicio ajustes del logo principal */
-  /* Fin ajustes del logo principal */
-  /* Inicio modificacion del navbar */
-  /* Fin modificacion del navbar  */
-}
+/* Oculto el logo de la media query */
 .contenedor header .logo-media-query-container {
   display: none;
 }
-.contenedor header .logo {
-  height: 5.3rem;
-  width: 5.3rem;
-  margin: 0 35px;
-  margin-bottom: 4.5px;
-}
-.contenedor header #menu-button {
-  display: none;
-}
-.contenedor header label {
-  display: none;
-}
-.contenedor header .navbar-inicio {
-  width: 100%;
-  height: 5.5rem;
-  line-height: 5.5rem;
-  background-color: #76d5bf;
-  position: fixed;
-  display: flex;
-  top: 0;
-  z-index: 3;
-}
-.contenedor header .navbar-inicio ul {
-  width: 100%;
-  flex-direction: row;
-  height: 100%;
-  position: relative;
-  right: 20px;
-  /* Inicio modificacion de li del navbar*/
-  /* Fin modificacion de li del navbar*/
-}
-.contenedor header .navbar-inicio ul .menu-list {
-  list-style: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 20px;
-  display: flex;
-  padding: 0 auto;
-  flex-direction: row;
-  text-decoration: none;
-  /* Inicio modificacion y detalles de los botones del navbar*/
-  /* Fin modificacion y detalles de los botones del navbar */
-}
-.contenedor header .navbar-inicio ul .menu-list:hover {
-  background-color: #4fc9ad;
-}
-.contenedor header .navbar-inicio ul .menu-list .botones {
-  padding: 0 40px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  width: 100%;
-}
-
-/* Inicio media query para index.html */
 @media screen and (max-width: 992px) {
-  .contenedor {
-    width: 100%;
-  }
-  .contenedor header {
-    /* Inicio header */
-    width: 100%;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    background-color: #76d5bf;
-    position: fixed;
-    top: 0;
-    /* Hago que el navbar siempre se sobreponga */
-    z-index: 3;
-    /* Fin header */
-  }
   .contenedor header .logo-media-query-container {
     width: 100%;
     display: flex;
@@ -153,9 +69,29 @@ h1, h2 {
     left: 0.625rem;
     height: 30px;
   }
+}
+
+/* Modifico el logo */
+.contenedor header .logo {
+  height: 5.3rem;
+  width: 5.3rem;
+  margin: 0 35px;
+  margin-bottom: 4.5px;
+}
+
+/* Oculto el menu hamburguesa */
+.contenedor header #menu-button {
+  display: none;
+}
+@media screen and (max-width: 992px) {
   .contenedor header #menu-button:checked ~ .navbar-inicio {
     margin: 0;
   }
+}
+.contenedor header label {
+  display: none;
+}
+@media screen and (max-width: 992px) {
   .contenedor header label {
     display: block;
     width: 30px;
@@ -167,15 +103,57 @@ h1, h2 {
     position: absolute;
     top: 0;
   }
-  .contenedor header .navbar-inicio:not(.logo-container) {
-    position: absolute;
-    top: 50px;
-    background-color: #76d5bf;
-    width: auto;
-    height: auto;
-    margin-left: -70%;
-    transition: all 1s;
+}
+/* Inicio modificacion del navbar */
+.contenedor header .navbar-inicio {
+  width: 100%;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  background-color: #76d5bf;
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 3;
+  
+}
+.contenedor header .navbar-inicio ul {
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  right: 20px;
+}
+/* Fin modificacion del navbar  */
+
+/* Inicio modificacion y detalles de los botones del navbar*/
+.contenedor header .navbar-inicio ul .menu-list {
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  padding: 0 auto;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.contenedor header .navbar-inicio ul .menu-list:hover {
+  background-color: #4fc9ad;
+}
+.contenedor header .navbar-inicio ul .menu-list .botones {
+  padding: 0 40px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+/* Fin modificacion y detalles de los botones del navbar */
+
+/* Inicio navbar vertical en media query */
+@media screen and (max-width: 992px) {
+  .contenedor header .navbar-inicio ul .logo-container {
+    display: none;
   }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
   .contenedor header .navbar-inicio ul:not(.logo-container) {
     flex-direction: column;
     position: relative;
@@ -184,83 +162,74 @@ h1, h2 {
     margin: 0;
     right: 0;
   }
-  .contenedor header .navbar-inicio .logo-container {
-    display: none;
+}
+@media screen and (max-width: 992px) {
+  /* Oculto el logo principal */
+  .contenedor header .navbar-inicio ul:not(.logo-container) {
+    position: absolute;
+    top: 50px;
+    background-color: #76d5bf;
+    width: auto;
+    height: auto;
+    margin-left: -70%;
+    transition: all 1s;
   }
 }
-/* Fin media query para index.html */
-.contenedor header .navbar-inicio ul {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 992px) {
+  .contenedor header .navbar-inicio {
+    width: 100%;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    background-color: #76d5bf;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  }
 }
-
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
+@media screen and (max-width: 992px) {
+  .contenedor header {
+    width: 100%;
+  }
 }
+/* Fin navbar vertical en media query */
 
 /* Inicio modificacion del flyer inicio */
 .flyer {
   margin-top: 6.25rem;
 }
-
 /* Fin modificacion del flyer inicio */
+
 /* Inicio modificacion del flyer publicidad */
 .flyer-publicidad {
   margin-top: 1.87rem;
 }
-
 /* Fin modificacion del flyer publicidad*/
-/* Inicio modificacion del catalogo */
+
+/* Inicio modificacion del catalogo de inicio */
 .catalogo-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
-/* Fin modificacion de las cajas*/
-/* Inicio modificacion del boton "Ir al catalogo" */
-.btn-primary {
-  color: white;
-  background-color: #76d5bf;
-  border-color: #76d5bf;
-}
-
-.btn-primary:hover {
-  background-color: #4fc9ad;
-  border-color: #4fc9ad;
-}
-
 @media screen and (max-width: 992px) {
   .catalogo-container {
     display: flex;
     justify-content: center;
   }
 }
-.contenedor header .navbar-inicio ul {
-  display: flex;
-  justify-content: center;
+.catalogo-container .boton {
+  color: white;
+  background-color: #76d5bf;
+  border-color: #76d5bf;
 }
-
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
+.catalogo-container .boton:hover {
+  background-color: #4fc9ad;
+  border-color: #4fc9ad;
 }
+/* Fin modificacion del catalogo de inicio */
 
-/* Inicio modificacion de logos redes */
-.logos-redes-container {
-  display: flex;
-  justify-content: space-evenly;
-}
 
-.logos-redes {
-  width: 3.12rem;
-  height: 3.12rem;
-  margin-bottom: 15px;
-}
-
-/* Fin modificacion de logos redes */
-/* Inicio customizacion del footer */
+/* Footer */
 .footer {
   margin-top: 1.8rem;
   height: auto;
@@ -268,25 +237,21 @@ h1, h2 {
   position: relative;
   bottom: 0;
 }
-
-.copy-footer {
-  text-align: center;
-}
-
-.redes-text-footer {
+.footer .redes-text-footer {
   text-align: center;
   font-size: 26px;
 }
-
-/* Fin customizacion del footer */
-.contenedor header .navbar-inicio ul {
+.footer .logos-redes-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-
-.titulo-container, h1, h2 {
-  animation: slideInDown;
-  animation-duration: 0.5s;
+.footer .logos-redes-container .logos-redes {
+  width: 3.12rem;
+  height: 3.12rem;
+  margin-bottom: 15px;
+}
+.footer .copy-footer {
+  text-align: center;
 }
 
 /* FAQ */
@@ -294,8 +259,7 @@ h1, h2 {
   /* Evito que el FAQ se sobreponga */
   z-index: 1;
 }
-
-.accordion-item {
+.accordion .accordion-item {
   background-color: #9de1d1;
 }
 
