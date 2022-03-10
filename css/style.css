@@ -8,13 +8,14 @@ h1, h2, .titulo-container {
   animation-duration: 0.5s;
 }
 
-/* Modificaciones generales */
+/* Inicio modificacion para elementos globales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Quito las decoraciones de los links */
 a {
   text-decoration: none;
 }
@@ -23,24 +24,27 @@ ul {
   list-style: none;
 }
 
-html {
-  height: 100%;
-}
-
 /* Inicio modificacion del body */
 body {
   font-family: "Barlow", sans-serif;
   font-size: 20px;
   background-color: #c4ede4;
-  position: relative;
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* Fin modificacion del body*/
+/* Defino al footer abajo */
+.container {
+  min-height: calc(100vh - 5.5rem - 10.9rem);
+  margin-bottom: 1.25rem;
+}
+
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container {
-  margin-top: 90px;
-  margin-bottom: 30px;
+  margin-top: 5.62rem;
+  margin-bottom: 1.87rem;
   text-align: center;
   color: white;
 }
@@ -52,14 +56,21 @@ h1, h2 {
 }
 
 /* Fin modificacion de los titulos y menu */
-/* Fin modificaciones generales */
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
 
-/* Header */
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
-/* Oculto el logo de la media query */
+/* Icono menu hamburguesa */
 .contenedor header .logo-media-query-container {
   display: none;
 }
+
 @media screen and (max-width: 992px) {
   .contenedor header .logo-media-query-container {
     width: 100%;
@@ -67,19 +78,15 @@ h1, h2 {
     justify-content: center;
     position: relative;
     left: 0.625rem;
-    height: 30px;
+    height: 1.87rem;
   }
 }
-
-/* Modifico el logo */
 .contenedor header .logo {
   height: 5.3rem;
   width: 5.3rem;
   margin: 0 35px;
   margin-bottom: 4.5px;
 }
-
-/* Oculto el menu hamburguesa */
 .contenedor header #menu-button {
   display: none;
 }
@@ -97,14 +104,13 @@ h1, h2 {
     width: 30px;
     height: 30px;
   }
-  .contenedor header label .menu-icon {
-    width: 3.12rem;
-    margin-bottom: 1.87rem;
-    position: absolute;
-    top: 0;
-  }
 }
-/* Inicio modificacion del navbar */
+.contenedor header label .menu-icon {
+  width: 3.12rem;
+  margin-bottom: 1.87rem;
+  position: absolute;
+  top: 0;
+}
 .contenedor header .navbar-inicio {
   width: 100%;
   height: 5.5rem;
@@ -114,7 +120,6 @@ h1, h2 {
   display: flex;
   top: 0;
   z-index: 3;
-  
 }
 .contenedor header .navbar-inicio ul {
   width: 100%;
@@ -122,10 +127,9 @@ h1, h2 {
   height: 100%;
   position: relative;
   right: 20px;
+  /* Inicio modificacion de li del navbar*/
+  /* Fin modificacion de li del navbar*/
 }
-/* Fin modificacion del navbar  */
-
-/* Inicio modificacion y detalles de los botones del navbar*/
 .contenedor header .navbar-inicio ul .menu-list {
   list-style: none;
   cursor: pointer;
@@ -135,8 +139,9 @@ h1, h2 {
   padding: 0 auto;
   flex-direction: row;
   text-decoration: none;
+  /* Inicio modificacion y detalles de los botones del navbar*/
+  /* Fin modificacion y detalles de los botones del navbar */
 }
-
 .contenedor header .navbar-inicio ul .menu-list:hover {
   background-color: #4fc9ad;
 }
@@ -145,15 +150,7 @@ h1, h2 {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   width: 100%;
 }
-/* Fin modificacion y detalles de los botones del navbar */
-
-/* Inicio navbar vertical en media query */
 @media screen and (max-width: 992px) {
-  .contenedor header .navbar-inicio ul .logo-container {
-    display: none;
-  }
-}
-@media screen and (max-width: 992px) and (max-width: 992px) {
   .contenedor header .navbar-inicio ul:not(.logo-container) {
     flex-direction: column;
     position: relative;
@@ -164,8 +161,7 @@ h1, h2 {
   }
 }
 @media screen and (max-width: 992px) {
-  /* Oculto el logo principal */
-  .contenedor header .navbar-inicio ul:not(.logo-container) {
+  .contenedor header .navbar-inicio:not(.logo-container) {
     position: absolute;
     top: 50px;
     background-color: #76d5bf;
@@ -176,36 +172,49 @@ h1, h2 {
   }
 }
 @media screen and (max-width: 992px) {
-  .contenedor header .navbar-inicio {
+  .contenedor header {
     width: 100%;
     height: 5.5rem;
     line-height: 5.5rem;
     background-color: #76d5bf;
     position: fixed;
     top: 0;
+    /* Hago que el navbar siempre se sobreponga */
     z-index: 3;
+  }
+  .contenedor header .logo-container {
+    display: none;
   }
 }
 @media screen and (max-width: 992px) {
-  .contenedor header {
+  .contenedor {
     width: 100%;
   }
 }
-/* Fin navbar vertical en media query */
+
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
 /* Inicio modificacion del flyer inicio */
 .flyer {
   margin-top: 6.25rem;
 }
-/* Fin modificacion del flyer inicio */
 
+/* Fin modificacion del flyer inicio */
 /* Inicio modificacion del flyer publicidad */
 .flyer-publicidad {
   margin-top: 1.87rem;
 }
-/* Fin modificacion del flyer publicidad*/
 
-/* Inicio modificacion del catalogo de inicio */
+/* Fin modificacion del flyer publicidad*/
+/* Inicio modificacion de las cajas*/
 .catalogo-container {
   width: 100%;
   display: flex;
@@ -226,16 +235,23 @@ h1, h2 {
   background-color: #4fc9ad;
   border-color: #4fc9ad;
 }
-/* Fin modificacion del catalogo de inicio */
 
+/* Fin modificacion de las cajas*/
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
 /* Footer */
 .footer {
-  margin-top: 1.8rem;
-  height: auto;
+  margin-top: auto;
+  height: 9.5rem;
   background-color: #76d5bf;
-  position: relative;
-  bottom: 0;
 }
 .footer .redes-text-footer {
   text-align: center;
@@ -252,6 +268,17 @@ h1, h2 {
 }
 .footer .copy-footer {
   text-align: center;
+  margin: 0;
+}
+
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
 }
 
 /* FAQ */
@@ -279,6 +306,15 @@ h1, h2 {
   background-color: #9de1d1;
   padding-bottom: 15px;
   margin-top: 10px;
+}
+.formulario .boton {
+  color: white;
+  background-color: #76d5bf;
+  border-color: #76d5bf;
+}
+.formulario .boton:hover {
+  background-color: #4fc9ad;
+  border-color: #4fc9ad;
 }
 
 /*# sourceMappingURL=style.css.map */

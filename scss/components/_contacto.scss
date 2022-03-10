@@ -8,5 +8,15 @@
     background-color: $bg-color-forms;
     padding-bottom: 15px;
     margin-top: 10px;
+    .boton{
+        color: $color-white ;
+        background-color: $bg-color-nav-foot;
+        border-color:  $bg-color-nav-foot;
+    }
+    
+    .boton:hover{
+        background-color: $bg-color-hover;
+        border-color: $bg-color-hover ;
+    }
 }
 

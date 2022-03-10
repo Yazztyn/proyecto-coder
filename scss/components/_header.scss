@@ -1,7 +1,7 @@
 @import "../base/_variables.scss";
 @import "../base/_extends.scss";
 
-/* Header */
+/* Inicio ocultacion de icono del menu */
 .contenedor{
 	header {
 		/* Inicio ocultacion del logo principal para media query */
@@ -13,9 +13,8 @@
 				justify-content: center;
 				position: relative;
 				left: 0.625rem;
-				height: 30px;
+				height: 1.87rem;
 			}
-
 		}
 		/* Fin ocultacion del logo principal para media query */
 
@@ -37,7 +36,6 @@
 						}
 					}
 				}
-
 			}
 		}
 		label {
@@ -46,12 +44,12 @@
 				display: block;
 				width: 30px;
 				height: 30px;
-				.menu-icon{
-					width: 3.12rem;
-					margin-bottom: 1.87rem;
-					position: absolute;
-					top: 0;
-				}
+			}
+			.menu-icon{
+				width: 3.12rem;
+				margin-bottom: 1.87rem;
+				position: absolute;
+				top: 0;
 			}
 		}
 
@@ -93,10 +91,6 @@
 					}
 					/* Fin modificacion y detalles de los botones del navbar */
 				}
-				@media screen and (max-width:992px){
-					.logo-container{
-						display: none;
-					}
 				/* Fin modificacion de li del navbar*/
 				@media screen and (max-width:992px){
 					&:not(.logo-container) {
@@ -120,7 +114,6 @@
 					transition: all 1s;
 				}
 			}
-
 		}
 		/* Fin modificacion del navbar  */
 		@media screen and (max-width:992px){
@@ -130,11 +123,15 @@
 			background-color: $bg-color-nav-foot;
 			position: fixed;
 			top: 0;
+			/* Hago que el navbar siempre se sobreponga */
 			z-index: 3;
+			.logo-container{
+				display: none;
+			}
 		}
 	}
 	@media screen and (max-width:992px){
 		width: 100%;
 	}
 }
-}
+

@@ -4,11 +4,10 @@
 /* Footer */
 
 .footer{
-    margin-top: 1.80rem;
-    height: auto;
+    margin-top: auto;
+    height: 9.5rem;
     background-color:$bg-color-nav-foot;
-    position: relative;
-    bottom: 0;
+
 
     .redes-text-footer{
         text-align: center;
@@ -28,7 +27,6 @@
 
     .copy-footer{
         text-align: center;
+        margin: 0;
     }
 }
-
-
