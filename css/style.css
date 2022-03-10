@@ -56,6 +56,11 @@ h1, h2 {
 }
 
 /* Fin modificacion de los titulos y menu */
+/* Quito el disclaimer */
+.disclaimer {
+  display: none;
+}
+
 .contenedor header .navbar-inicio ul {
   display: flex;
   justify-content: center;
@@ -66,11 +71,18 @@ h1, h2 {
   animation-duration: 0.5s;
 }
 
-/* Icono menu hamburguesa */
+/* Inicio ocultacion de icono del menu */
+.contenedor header {
+  /* Inicio ocultacion del logo principal para media query */
+  /* Fin ocultacion del logo principal para media query */
+  /* Inicio ajustes del logo principal */
+  /* Fin ajustes del logo principal */
+  /* Inicio modificacion del navbar */
+  /* Fin modificacion del navbar  */
+}
 .contenedor header .logo-media-query-container {
   display: none;
 }
-
 @media screen and (max-width: 992px) {
   .contenedor header .logo-media-query-container {
     width: 100%;
@@ -214,7 +226,7 @@ h1, h2 {
 }
 
 /* Fin modificacion del flyer publicidad*/
-/* Inicio modificacion de las cajas*/
+/* Inicio modificacion del catalogo */
 .catalogo-container {
   width: 100%;
   display: flex;
