@@ -18,17 +18,21 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width:992px){
+        display: flex;
+        justify-content: center;
+    }
+    
+    .boton{
+        color: $color-white ;
+        background-color: $bg-color-nav-foot;
+        border-color:  $bg-color-nav-foot;
+    }
+    
+    .boton:hover{
+        background-color: $bg-color-hover;
+        border-color: $bg-color-hover ;
+    }
 }
 /* Fin modificacion de las cajas*/
-
-/* Inicio modificacion del boton "Ir al catalogo" */
-.btn-primary{
-    color: $color-white ;
-    background-color: $bg-color-nav-foot;
-    border-color:  $bg-color-nav-foot;
-}
-
-.btn-primary:hover{
-    background-color: $bg-color-hover;
-    border-color: $bg-color-hover ;
-}

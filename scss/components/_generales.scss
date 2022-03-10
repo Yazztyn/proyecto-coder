@@ -14,24 +14,28 @@ a{
 ul{
     list-style: none;
 }
-html{
-    height: 100%;
-}
 
 /* Inicio modificacion del body */
 body{
     font-family: $font;
     font-size:$font-body;
     background-color: $bg-color-body;
-    position: relative;
-    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 /* Fin modificacion del body*/
 
+/* Defino al footer abajo */
+.container{
+    min-height: calc(100vh - 5.5rem - 10.90rem);
+    margin-bottom: 1.25rem;
+}
+
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container{
-    margin-top: 90px;
-    margin-bottom: 30px;
+    margin-top: 5.62rem;
+    margin-bottom: 1.87rem;
     text-align: center;
     color: $color-white;
     @extend %animaciones;
@@ -45,4 +49,4 @@ h1,h2{
 }
 /* Fin modificacion de los titulos y menu */
 
-/* Fin modificacion para elementos globales */
+

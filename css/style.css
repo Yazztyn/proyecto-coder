@@ -1,11 +1,11 @@
-.navbar-inicio ul {
+.contenedor header .navbar-inicio ul {
   display: flex;
   justify-content: center;
 }
 
-.titulo-container, h1, h2 {
-    animation: slideInDown;
-    animation-duration: 0.5s;
+h1, h2, .titulo-container {
+  animation: slideInDown;
+  animation-duration: 0.5s;
 }
 
 /* Inicio modificacion para elementos globales */
@@ -24,51 +24,94 @@ ul {
   list-style: none;
 }
 
-html {
-  height: 100%;
-}
-
 /* Inicio modificacion del body */
 body {
   font-family: "Barlow", sans-serif;
   font-size: 20px;
   background-color: #c4ede4;
-  position: relative;
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
+
 /* Fin modificacion del body*/
+/* Defino al footer abajo */
+.container {
+  min-height: calc(100vh - 5.5rem - 10.9rem);
+  margin-bottom: 1.25rem;
+}
 
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container {
-  margin-top: 90px;
-  margin-bottom: 30px;
+  margin-top: 5.62rem;
+  margin-bottom: 1.87rem;
   text-align: center;
   color: white;
 }
-/* Fin configuracion para los titulos de las pages */
 
+/* Fin configuracion para los titulos de las pages */
 /* Inicio modificacion de los titulos y menu */
 h1, h2 {
   font-size: 30px;
 }
+
 /* Fin modificacion de los titulos y menu */
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
 
-/* Fin modificacion para elementos globales */
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
-/* Header */
-
-/* Inicio ocultacion de icono del menu */
-header label {
+/* Icono menu hamburguesa */
+.contenedor header .logo-media-query-container {
   display: none;
 }
 
-#menu-button {
+@media screen and (max-width: 992px) {
+  .contenedor header .logo-media-query-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0.625rem;
+    height: 1.87rem;
+  }
+}
+.contenedor header .logo {
+  height: 5.3rem;
+  width: 5.3rem;
+  margin: 0 35px;
+  margin-bottom: 4.5px;
+}
+.contenedor header #menu-button {
   display: none;
 }
-/* Fin ocultacion icono del menu */
-
-/* Inicio modificacion del navbar */
-.navbar-inicio {
+@media screen and (max-width: 992px) {
+  .contenedor header #menu-button:checked ~ .navbar-inicio {
+    margin: 0;
+  }
+}
+.contenedor header label {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .contenedor header label {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}
+.contenedor header label .menu-icon {
+  width: 3.12rem;
+  margin-bottom: 1.87rem;
+  position: absolute;
+  top: 0;
+}
+.contenedor header .navbar-inicio {
   width: 100%;
   height: 5.5rem;
   line-height: 5.5rem;
@@ -78,17 +121,16 @@ header label {
   top: 0;
   z-index: 3;
 }
-.navbar-inicio ul {
+.contenedor header .navbar-inicio ul {
   width: 100%;
   flex-direction: row;
   height: 100%;
   position: relative;
   right: 20px;
+  /* Inicio modificacion de li del navbar*/
+  /* Fin modificacion de li del navbar*/
 }
-/* Fin modificacion del navbar  */
-
-/* Inicio modificacion de li del navbar*/
-.menu-list {
+.contenedor header .navbar-inicio ul .menu-list {
   list-style: none;
   cursor: pointer;
   font-weight: bold;
@@ -97,51 +139,40 @@ header label {
   padding: 0 auto;
   flex-direction: row;
   text-decoration: none;
+  /* Inicio modificacion y detalles de los botones del navbar*/
+  /* Fin modificacion y detalles de los botones del navbar */
 }
-.menu-list:hover {
+.contenedor header .navbar-inicio ul .menu-list:hover {
   background-color: #4fc9ad;
 }
-/* Fin modificacion de li del navbar*/
-
-/* Inicio modificacion y detalles de los botones del navbar*/
-.buttons {
+.contenedor header .navbar-inicio ul .menu-list .botones {
   padding: 0 40px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   width: 100%;
 }
-/* Fin modificacion y detalles de los botones del navbar */
-
-/* Inicio ajustes del logo principal */
-.logo {
-  height: 5.3rem;
-  width: 5.3rem;
-  margin: 0 35px;
-  margin-bottom: 4.5px;
-}
-/* Fin ajustes del logo principal */
-
-/* Inicio ocultacion del logo principal para media query */
-.logo-media-query-container {
-  display: none;
-}
-/* Fin ocultacion del logo principal para media query */
-
-/* Inicio media query para index.html */
 @media screen and (max-width: 992px) {
-  .contenedor {
+  .contenedor header .navbar-inicio ul:not(.logo-container) {
+    flex-direction: column;
+    position: relative;
     width: 100%;
+    padding: 0;
+    margin: 0;
+    right: 0;
   }
-
-  /* Inicio boton menu estatico */
-  header label {
-    display: block;
-    width: 30px;
-    height: 30px;
+}
+@media screen and (max-width: 992px) {
+  .contenedor header .navbar-inicio:not(.logo-container) {
+    position: absolute;
+    top: 50px;
+    background-color: #76d5bf;
+    width: auto;
+    height: auto;
+    margin-left: -70%;
+    transition: all 1s;
   }
-  /* Fin boton menu estatico */
-
-  /* Inicio header */
-  .header {
+}
+@media screen and (max-width: 992px) {
+  .contenedor header {
     width: 100%;
     height: 5.5rem;
     line-height: 5.5rem;
@@ -151,139 +182,122 @@ header label {
     /* Hago que el navbar siempre se sobreponga */
     z-index: 3;
   }
-  /* Fin header */
-
-  /* Inicio navbar vertical */
-  .navbar-inicio:not(.logo-container) {
-    position: absolute;
-    top: 50px;
-    background-color: #76d5bf;
-    width: 15%;
-    height: auto;
-    margin-left: -70%;
-    transition: all 1s;
-  }
-
-  ul:not(.logo-container) {
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    right: 0;
-  }
-  /* Fin navbar vertical */
-
-  /* Inicio ocultacion del logo principal */
-  .logo-container {
+  .contenedor header .logo-container {
     display: none;
   }
-  /* Fin ocultacion del logo principal */
-
-  /* Inicio modificacion del logo en media query */
-  .logo-media-query-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 0.625rem;
-    height: 30px;
-  }
-  /* Fin modificacion del logo en media query */
-
-  /* Inicio activacion y modificacion del boton menu */
-  #menu-button:checked ~ .navbar-inicio {
-    margin: 0;
-  }
-
-  .menu-icon {
-    width: 3.12rem;
-    margin-bottom: 1.87rem;
-    position: absolute;
-    top: 0;
-  }
-
-  .catalogo-container {
-    display: flex;
-    justify-content: center;
-  }
-  /* Fin activacion y modificacion del boton menu */
 }
-/* Fin media query para index.html */
+@media screen and (max-width: 992px) {
+  .contenedor {
+    width: 100%;
+  }
+}
+
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
 /* Inicio modificacion del flyer inicio */
 .flyer {
   margin-top: 6.25rem;
 }
-/* Fin modificacion del flyer inicio */
 
+/* Fin modificacion del flyer inicio */
 /* Inicio modificacion del flyer publicidad */
 .flyer-publicidad {
   margin-top: 1.87rem;
 }
-/* Fin modificacion del flyer publicidad*/
 
-/* Inicio modificacion del catalogo */
+/* Fin modificacion del flyer publicidad*/
+/* Inicio modificacion de las cajas*/
 .catalogo-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-/* Fin modificacion de las cajas*/
-
-/* Inicio modificacion del boton "Ir al catalogo" */
-.btn-primary {
+@media screen and (max-width: 992px) {
+  .catalogo-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.catalogo-container .boton {
   color: white;
   background-color: #76d5bf;
   border-color: #76d5bf;
 }
-
-.btn-primary:hover {
+.catalogo-container .boton:hover {
   background-color: #4fc9ad;
   border-color: #4fc9ad;
 }
-/* Fin modificacion del boton "Ir al catalogo" */
 
-/* Inicio modificacion de logos redes */
-.logos-redes-container {
+/* Fin modificacion de las cajas*/
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  height: 9.5rem;
+  background-color: #76d5bf;
+}
+.footer .redes-text-footer {
+  text-align: center;
+  font-size: 26px;
+}
+.footer .logos-redes-container {
   display: flex;
   justify-content: space-evenly;
 }
-
-.logos-redes {
+.footer .logos-redes-container .logos-redes {
   width: 3.12rem;
   height: 3.12rem;
   margin-bottom: 15px;
 }
-/* Fin modificacion de logos redes */
-
-/* Inicio customizacion del footer */
-.footer {
-  margin-top: 1.8rem;
-  height: auto;
-  background-color: #76d5bf;
-  position: relative;
-  bottom: 0;
-}
-
-.copy-footer {
+.footer .copy-footer {
   text-align: center;
+  margin: 0;
 }
 
-.redes-text-footer {
-  text-align: center;
-  font-size: 26px;
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
 }
-/* Fin customizacion del footer */
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
+}
 
 /* FAQ */
 .accordion {
   /* Evito que el FAQ se sobreponga */
   z-index: 1;
 }
-
-.accordion-item {
+.accordion .accordion-item {
   background-color: #9de1d1;
+}
+
+.contenedor header .navbar-inicio ul {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-container, h1, h2 {
+  animation: slideInDown;
+  animation-duration: 0.5s;
 }
 
 /* Contacto */
@@ -292,6 +306,15 @@ header label {
   background-color: #9de1d1;
   padding-bottom: 15px;
   margin-top: 10px;
+}
+.formulario .boton {
+  color: white;
+  background-color: #76d5bf;
+  border-color: #76d5bf;
+}
+.formulario .boton:hover {
+  background-color: #4fc9ad;
+  border-color: #4fc9ad;
 }
 
 /*# sourceMappingURL=style.css.map */

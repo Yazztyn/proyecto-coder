@@ -2,11 +2,12 @@
 @import "../base/_extends.scss";
 
 /* FAQ */
+
 .accordion{
     /* Evito que el FAQ se sobreponga */
     z-index: 1;
-   
-}
-.accordion-item{
-    background-color: $bg-color-forms;
+
+    .accordion-item{
+        background-color: $bg-color-forms;
+    }
 }
