@@ -262,7 +262,7 @@ h1, h2 {
 /* Footer */
 .footer {
   margin-top: auto;
-  height: 9.5rem;
+  height: auto;
   background-color: #76d5bf;
 }
 .footer .redes-text-footer {
