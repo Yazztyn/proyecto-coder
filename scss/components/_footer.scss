@@ -4,7 +4,9 @@
 /* Footer */
 
 .footer{
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     height: auto;
     background-color:$bg-color-nav-foot;
 

@@ -3,6 +3,7 @@
 
 /* Inicio ocultacion de icono del menu */
 .contenedor{
+	margin-bottom: 3.12rem;
 	header {
 		/* Inicio ocultacion del logo principal para media query */
 		.logo-media-query-container{
@@ -88,6 +89,7 @@
 						padding: 0 40px;
 						text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 						width: 100%;
+						font-size:24px;
 					}
 					/* Fin modificacion y detalles de los botones del navbar */
 				}

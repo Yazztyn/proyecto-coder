@@ -20,22 +20,16 @@ body{
     font-family: $font;
     font-size:$font-body;
     background-color: $bg-color-body;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 10.5rem;
+    min-height: 100vh;
 }
 /* Fin modificacion del body*/
-
-/* Defino al footer abajo */
-.container {
-    min-height: calc(100vh - 5.5rem - 9.5rem);
-    margin-bottom: 1.25rem;
-  }
 
 /* Inicio configuracion para los titulos de las pages */
 .titulo-container{
     margin-top: 5.62rem;
-    margin-bottom: 1.87rem;
+    margin-bottom: 2.5rem;
     text-align: center;
     color: $color-white;
     @extend %animaciones;
@@ -43,8 +37,12 @@ body{
 /* Fin configuracion para los titulos de las pages */
 
 /* Inicio modificacion de los titulos y menu */
-h1,h2{
+h1{
     font-size: $font-titulos;
+    @extend %animaciones;
+}
+h2{
+    font-size: $font-h2;
     @extend %animaciones;
 }
 /* Fin modificacion de los titulos y menu */
