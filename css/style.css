@@ -272,7 +272,7 @@ h2 {
 }
 
 /* Footer */
-.footer {
+.footer-class {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -280,20 +280,20 @@ h2 {
   background-color: #76d5bf;
   margin-bottom: 0%;
 }
-.footer .redes-text-footer {
+.footer-class .redes-text-footer {
   text-align: center;
   font-size: 26px;
 }
-.footer .logos-redes-container {
+.footer-class .logos-redes-container {
   display: flex;
   justify-content: space-evenly;
 }
-.footer .logos-redes-container .logos-redes {
+.footer-class .logos-redes-container .logos-redes {
   width: 3.12rem;
   height: 3.12rem;
   margin-bottom: 15px;
 }
-.footer .copy-footer {
+.footer-class .copy-footer {
   text-align: center;
   margin: 0;
 }
