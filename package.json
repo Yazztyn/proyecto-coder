@@ -1,7 +1,7 @@
 {
-  "name": "emprendimiento-tamae-nakazato2",
+  "name": "emprendimiento-tamae-nakazato",
   "version": "1.0.0",
-  "description": "",
+  "description": "ToytaDesign ecommerce",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Yazztyn/proyecto-coder.git"
   },
-  "author": "",
+  "author": "Agustin Tamae",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Yazztyn/proyecto-coder/issues"

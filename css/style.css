@@ -227,6 +227,10 @@ h2 {
   margin-top: 1.87rem;
 }
 
+.somos-paragraph {
+  font-size: 22px;
+}
+
 /* Fin modificacion del flyer publicidad*/
 .card-text {
   text-decoration: line-through;
